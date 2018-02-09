@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>second</title>
+  <style type="text/css">
+    .parent {
+    height: 200px;
+    line-height: 200px;
+    border: 1px solid red;
+    text-align: center;
+  }
+  .child {
+    background: #000;
+    color: #fff;
+  }
+
+    .parent1 {
+      position: relative;
+      height: 200px;
+      border: 1px solid blue;
+    }
+
+    .child1 {
+      position: absolute;
+      width: 500px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      margin-left: -250px;
+      margin-top: -50px;
+      background: #ccc;
+    }
+
+    .parent2 {
+      position: relative;
+      height: 200px;
+      border: 1px solid red;
+    }
+    .child2 {
+      width: 500px;
+      height: 100px;
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+      background: #666;
+    }
+
+    .parent3 {
+      position: relative;
+      height: 200px;
+      border: 1px solid black;
+    }
+    .child3 {
+      position: absolute;
+      height: 100px;
+      width: 500px;
+      top: 0;
+      left: 0;
+      bottom:0;
+      right: 0;
+      margin: auto;
+      background: #ddd;
+    }
+
+    .parent4 {
+      height: 200px;
+      width: 100%;
+      border: 1px solid blue;
+      display: table;
+    }
+
+    .child4 {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .parent5{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid green;
+      height: 200px;
+    }
+
+    .child5 {
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <h3>垂直水平居中</h3>
+
+   <h4>01 行内元素(单行文字垂直居中)</h4>
+  <div class="parent">
+    <span class="child">虽然 webpack 带来了许多可配置性，同事也造就了它的复杂性。</span>
+  </div>
+
+  <h4>02 块级元素: 绝对定位</h4>
+  <div class="parent1">
+    <div class="child1"></div>
+  </div>
+
+  <h4>03 块级元素: 绝对定位 + transform</h4>
+  <div class="parent2">
+     <div class="child2"></div>
+  </div>
+  <h4>04 块级元素:绝对定位 + margin auto</h4>
+  <div class="parent3">
+    <div class="child3"></div>
+  </div>
+
+  <h4>05 块级元素: display:table-cell</h4>
+  <div class="parent4">
+    <div class="child4">虽然 webpack 带来了许多可配置性，同事也造就了它的复杂性。
+      而 Parcel 带来简单性。 官方号称 Parcel 为 “零配置” ，开箱即用。</div>
+  </div>
+
+  <h4>06 块级元素:display:flex</h4>
+  <div class="parent5">
+    <div class="child5"></div>
+  </div>
+</body>
+</html>
